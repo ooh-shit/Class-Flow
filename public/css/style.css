@@ -1,0 +1,122 @@
+.menu {
+  margin-left: 65vw;
+}
+form
+{
+  height: 75vh;
+  width: 50vw;
+  margin-left: 25vw;
+  margin-top: 10vh;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(179, 179, 179);
+}
+input[type = "radio"]
+{
+  display: none;
+}
+
+
+input[type = "radio"]:checked + label
+{
+  transition: 0.25s;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: 2px ;
+  outline-offset: 2px;
+}
+
+.radios
+{
+  border-top: 1px solid gray;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.radios:nth-child(4)
+{
+  border-bottom: 1px solid gray;
+}
+.radios label
+{
+  height: 5%;
+  width: 10%;
+  font-size: larger;
+  padding-left: 5px;
+  align-items: center;
+}
+.times
+{
+  margin-bottom: 30px;
+  border-bottom: 1px solid gray;
+}
+button
+{
+  margin-left: 21vw;
+}
+
+
+/* SHOW STREAM CSS FOR SHOWING CLASSES */
+
+.showForm
+{
+  height: 20vh;
+  margin-top:5px;
+  border: none;
+}
+.showFormFlr
+{
+  height: 35vh;
+  width: 60vw; 
+  margin-left: 0px;
+  margin-top:5px;
+  border: none;
+}
+.btnflr
+{
+  margin-left: 15px;
+}
+.showForm label ,.showFormFlr label
+{
+  background-color: rgba(128, 128, 128, 0.236);
+  height: 6vh;
+  width: 5vw;
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  justify-content: center;
+}
+.StatBox{
+  border: 1px solid gray;
+  height: 60vh;
+  width: 97vw;
+  margin-left: 1.5vw;
+  margin-top: 2vh;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-row: 1fr 1fr 1fr 1fr;
+  padding: 20px;
+}
+.BookedBox,.NotBookedBox
+{
+  height: 150px;
+  width: 140px;
+  border: 1px solid black;
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+}
+b
+{ 
+  display: inline-block;
+  width: 50%;
+}
+.BookedBox
+{
+  background-color: rgba(255, 0, 0, 0.175);
+}
+.NotBookedBox
+{
+  background-color: rgba(0, 128, 0, 0.419);
+}

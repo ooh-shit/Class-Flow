@@ -1,0 +1,61 @@
+<%- include("partials/header.ejs") %>
+
+  
+ 
+  <form action="/show/stat" method="post" class="showForm">
+    <h1>BOOKINGS BASED ON STATUS</h1>
+    
+    <div class="form-check form-check-inline">
+      <input type="radio" name="status" id="unbook" value="Not Booked">
+      <label for="unbook">FREE</label>
+    </div>
+    
+    <div class="form-check form-check-inline">
+      <input type="radio" name="status" id="book" value="booked">
+      <label for="book">BOOKED</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input type="radio" name="status" id="all" value="all">
+      <label for="all">ALL</label>
+    </div>
+    
+    <button type="submit">Search</button>
+  </form>
+  
+
+  <div class="StatBox">
+
+    <% if(locals.Result) {%>
+    <% for(var i=0 ; i< Result[0].length ; i++) { %>
+
+      <%const stat =  Result[0][i]["Status"] %>
+      <% console.log(stat); %>
+
+      <% if(stat === "Not Booked"){ %>
+        <% BoxClass = "NotBookedBox" %>
+      <% }else{ %>
+        <% BoxClass = "BookedBox" %>
+      <% } %>
+      
+      <div class=<%= BoxClass %>>
+
+        <h6><b>Class  </b><%=Result[0][i]["Room_No"] %></h6>
+        <h6><b>Floor  </b><%=Result[0][i]["Floor_No"] %></h6>
+        <h6><b>Start  </b><%=Result[0][i]["Start_time"] %></h6>
+        <h6><b>End    </b><%=Result[0][i]["End_time"] %></h6>
+        <h6><b>Course </b><%=Result[0][i]["Subject"] %></h6>
+
+
+        
+      </div>
+
+    <% } %>
+    <% } else {%>
+      <h1>Search</h1>  
+    <% } %>
+
+    
+  </div>
+</body>
+</html>

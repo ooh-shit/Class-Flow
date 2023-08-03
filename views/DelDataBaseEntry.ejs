@@ -1,0 +1,66 @@
+<%- include("partials/header.ejs") %>
+<body>
+
+  <form action="/data/del" method="post" class="form-group">
+    <h1>DELETE SLOT FROM DATABASE</h1> 
+    
+    <div class="radios">
+      <h5>Floor</h5>
+  
+      <input type="radio" name="Floor" id="one" value="first">
+      <label for="one">First</label>
+  
+      <input type="radio" name="Floor" id="two" value="second">
+      <label for="two">Second</label>
+  
+      <input type="radio" name="Floor" id="third" value="third">
+      <label for="third">Third</label>
+  
+      <input type="radio" name="Floor" id="fourth" value="fourth">
+      <label for="fourth">Fourth</label>
+  
+      <input type="radio" name="Floor" id="fifth" value="fifth">
+      <label for="fifth">Fifth</label>
+  
+    </div>
+  
+    
+    <div class="radios">
+      <h5>Class Number</h5>
+      <input type="radio" name="class" id="fclass" value="01">
+      <label for="fclass">01</label>
+  
+      <input type="radio" name="class" id="sclass" value="02">
+      <label for="sclass">02</label>
+  
+      <input type="radio" name="class" id="tclass" value="03">
+      <label for="tclass">03</label>
+  
+      <input type="radio" name="class" id="frclass" value="04">
+      <label for="frclass">04</label>
+  
+      <input type="radio" name="class" id="ffclass" value="05">
+      <label for="ffclass">05</label>
+  
+      <input type="radio" name="class" id="sixclass" value="06">
+      <label for="sixclass">06</label>
+  
+    </div>
+    
+    <div class="times form-row">
+      <div class="form-group col-md-6">
+        <label for="stime">Start TIme</label>
+        <input type="time" class="form-control" name="stime" id="stime">
+      </div>
+  
+      <div class="form-group col-md-6">
+        <label for="etime">End Time</label>
+        <input type="time" name="etime" class="form-control" id="etime">
+      </div>
+    </div>
+  
+    <button type="submit" class="btn btn-secondary btn-lg btn-dark">DELETE</button>
+  </form>
+
+</body>
+</html>
